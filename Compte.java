@@ -11,7 +11,7 @@ public abstract class Compte {
     protected static int nbOfCount =0;
     protected static int totalInterest =0;
     protected static int nbOfTransaction =0;
-    protected static ArrayList<Compte> comptes= new ArrayList<Compte>();
+    protected static ArrayList<Compte> comptes= new ArrayList<>();
 
 
     public Compte() {
