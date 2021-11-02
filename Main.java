@@ -31,7 +31,7 @@ public class Main{
         count1.affiche();
         count2.affiche();
         count3.affiche();
-//
+
         try {
             count1.withdraw(100);
         } catch (Exception e) {
@@ -63,6 +63,8 @@ public class Main{
         }
 
         Compte.bank();
+
+        Compte.listCount();
 
 
     }

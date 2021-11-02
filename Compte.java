@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public abstract class Compte {
 
@@ -10,6 +11,8 @@ public abstract class Compte {
     protected static int nbOfCount =0;
     protected static int totalInterest =0;
     protected static int nbOfTransaction =0;
+    protected static ArrayList<Compte> comptes= new ArrayList<Compte>();
+
 
     public Compte() {
         ++nbOfCount;
@@ -33,7 +36,9 @@ public abstract class Compte {
             balance = initialDeposit - interestRate - countPrice - totalPriceCard;
             totalInterest+=interestRate+ countPrice;
             ++nbOfTransaction;
+            comptes.add(this);
         }
+
     }
 
 
@@ -92,6 +97,14 @@ public abstract class Compte {
         System.out.println("===============");
         System.out.println("Les intérêts de la banque sont de: " + totalInterest + "€ pour "+nbOfTransaction+" " +
                 "transactions");
+    }
+
+    public static void listCount(){
+//
+
+        for (Compte compte :comptes) {
+            compte.affiche();
+        }
     }
 
 

@@ -22,6 +22,7 @@ public class ComptePremium extends Compte {
             balance = initialDeposit - interestRate - countPrice - totalPriceCard;
             totalInterest+=interestRate+countPrice;
             ++nbOfTransaction;
+            comptes.add(this);
         }
     }
 
