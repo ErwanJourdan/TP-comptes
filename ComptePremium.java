@@ -20,7 +20,7 @@ public class ComptePremium extends Compte {
             throw new Exception("Le dépot initial est insuffisant pour ouvrir un compte premium");
         } else {
             balance = initialDeposit - interestRate - countPrice - totalPriceCard;
-            totalInterest+=interestRate;
+            totalInterest+=interestRate+countPrice;
             ++nbOfTransaction;
         }
     }

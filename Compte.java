@@ -31,7 +31,7 @@ public abstract class Compte {
             throw new Exception("Le dépot initial est insuffisant pour ouvrir ce compte");
         } else {
             balance = initialDeposit - interestRate - countPrice - totalPriceCard;
-            totalInterest+=interestRate;
+            totalInterest+=interestRate+ countPrice;
             ++nbOfTransaction;
         }
     }
