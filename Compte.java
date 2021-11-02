@@ -50,7 +50,6 @@ public abstract class Compte {
         for (Carte carte : cartes) {
             System.out.println("   Type de cartes : " + carte.name());
         }
-        ;
     }
 
     public void withdraw(double withdrawalAmount) throws Exception {
@@ -100,8 +99,6 @@ public abstract class Compte {
     }
 
     public static void listCount(){
-//
-
         for (Compte compte :comptes) {
             compte.affiche();
         }

@@ -8,6 +8,9 @@ public class ComptePremium extends Compte {
 
     }
 
+
+//    J'ai volontairement laissé les intérêts de la banque si changement, de même pour le plafond.
+//    J'ai modifier la méthode initialize() pour ne pas prendre en compte le plafond.
     @Override
     public void initialize(double initialDeposit, Carte[] cartes) throws Exception {
         int totalPriceCard = 0;
@@ -16,6 +19,7 @@ public class ComptePremium extends Compte {
             totalPriceCard += carte.getPrice();
             totalInterest += carte.getPrice();
         }
+//        Dépôt initial volontairement mis à 1000€, c'est un compte premium quand même !
         if (initialDeposit < 1000) {
             throw new Exception("Le dépot initial est insuffisant pour ouvrir un compte premium");
         } else {
@@ -26,6 +30,8 @@ public class ComptePremium extends Compte {
         }
     }
 
+
+//    J'ai modifier la méthode withdraw() pour ne pas prendre en compte le plafond.
     @Override
     public void withdraw(double withdrawalAmount) throws Exception {
         balance = balance - withdrawalAmount - interestRate;
